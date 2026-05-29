@@ -1,12 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap, Info, User } from "lucide-react";
 import { motion } from "framer-motion";
+import { ShaderBackground } from "@/components/ShaderBackground";
 
 export default function About() {
   return (
     <div className="min-h-screen bg-muted/10 pb-24">
-      <div className="bg-primary text-primary-foreground py-16">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
+      <div className="relative text-white py-16 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <ShaderBackground />
+          <div className="absolute inset-0 bg-primary/40 backdrop-blur-[4px] dark:bg-background/70" />
+        </div>
+        <div className="container relative z-10 mx-auto px-4 text-center max-w-3xl">
           <motion.h1 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
