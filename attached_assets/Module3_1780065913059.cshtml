@@ -1,0 +1,247 @@
+@* Views/Modules/Content/Module3.cshtml *@
+@{
+    ViewData["Title"] = "الموديول الثالث — مهارات دمج الوسائط المتعددة وإنشاء اختبارات تفاعلية";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="module-content" dir="rtl">
+
+    <div class="module-hero text-white rounded-4 p-4 mb-4" style="background:#059669">
+        <div class="d-flex align-items-center gap-3 mb-2">
+            <span class="fs-1">🎬</span>
+            <div>
+                <h1 class="h3 mb-0">الموديول الثالث</h1>
+                <p class="mb-0 opacity-75">مهارات دمج الوسائط المتعددة وإنشاء اختبارات تفاعلية</p>
+            </div>
+        </div>
+        <div class="badge bg-white text-success mt-2">الهدف العام: مهارات دمج الوسائط المتعددة وإنشاء اختبارات تفاعلية</div>
+    </div>
+
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header bg-light fw-bold">🎯 الأهداف الخاصة الإجرائية</div>
+        <div class="card-body">
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 py-1">✅ ضبط خصائص الصورة</li>
+                        <li class="list-group-item border-0 py-1">✅ إدراج مقاطع فيديو من YouTube أو Vimeo أو Webcam</li>
+                        <li class="list-group-item border-0 py-1">✅ إضافة خرائط تفاعلية وإنفوجرافيك</li>
+                        <li class="list-group-item border-0 py-1">✅ إدراج روابط تفاعلية بين الصفحات</li>
+                        <li class="list-group-item border-0 py-1">✅ إنشاء سيناريوهات تعليمية مختلفة</li>
+                        <li class="list-group-item border-0 py-1">✅ تصميم Quiz (اختيارات متعددة، صح/خطأ)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 py-1">✅ تحديد استجابات صحيحة وخاطئة وتغذية راجعة</li>
+                        <li class="list-group-item border-0 py-1">✅ استخدام الشرائح المنطقية</li>
+                        <li class="list-group-item border-0 py-1">✅ نظام التنقل الحر (Non-linear)</li>
+                        <li class="list-group-item border-0 py-1">✅ إدراج صور ونصوص بمولد AI</li>
+                        <li class="list-group-item border-0 py-1">✅ إنشاء شخصيات افتراضية</li>
+                        <li class="list-group-item border-0 py-1">✅ المشاركة الجماعية والتعاون</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- أنواع الألعاب --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#059669">🎮 أنواع الألعاب التفاعلية في Genially</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="card border-0 bg-light h-100">
+                        <div class="card-body">
+                            <h6 class="fw-bold">🚪 ألعاب الهروب (Escape Rooms)</h6>
+                            <p class="small text-muted">مثل قالب "Artificial Intelligence" أو "Education Escape Room" — يحل الطالب ألغازاً للانتقال من غرفة لأخرى.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 bg-light h-100">
+                        <div class="card-body">
+                            <h6 class="fw-bold">❓ ألعاب المسابقات (Quizzes)</h6>
+                            <p class="small text-muted">مثل "Battleship Quiz" أو "Vibrant Quiz" — تعتمد على نظام النقاط والمنافسة.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 bg-light h-100">
+                        <div class="card-body">
+                            <h6 class="fw-bold">🧠 ألعاب الذاكرة والتركيز</h6>
+                            <p class="small text-muted">مثل "Memory Game" التي تعتمد على مطابقة الصور أو المعلومات.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 bg-light h-100">
+                        <div class="card-body">
+                            <h6 class="fw-bold">🎲 ألعاب المسارات (Board Games)</h6>
+                            <p class="small text-muted">مثل "The Big Challenge" — تشبه ألعاب اللوحة التقليدية بطريقة رقمية تفاعلية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- خطوات إنشاء لعبة --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#4F46E5">🔧 خطوات إنشاء لعبة تعليمية في Genially</div>
+        <div class="card-body">
+            <div class="accordion" id="stepsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#step1">
+                            <strong>1️⃣ اختيار القالب المناسب (Gamification)</strong>
+                        </button>
+                    </h2>
+                    <div id="step1" class="accordion-collapse collapse show" data-bs-parent="#stepsAccordion">
+                        <div class="accordion-body small">
+                            <ul>
+                                <li>من اللوحة الرئيسية اضغط <strong>Create Genially</strong></li>
+                                <li>اختر قسم <strong>Gamification</strong></li>
+                                <li><strong>Quizzes:</strong> ألعاب الأسئلة والاختيارات</li>
+                                <li><strong>Games:</strong> ألعاب اللوحة الكلاسيكية</li>
+                                <li><strong>Escape Game:</strong> ألعاب الهروب والألغاز</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step2">
+                            <strong>2️⃣ تخصيص المحتوى</strong>
+                        </button>
+                    </h2>
+                    <div id="step2" class="accordion-collapse collapse" data-bs-parent="#stepsAccordion">
+                        <div class="accordion-body small">
+                            <ul>
+                                <li>اضغط مرتين على أي نص لاستبداله بأسئلتك</li>
+                                <li>استبدل الصور من جهازك أو مكتبة Genially</li>
+                                <li>استخدم العناصر التفاعلية لربط المراحل</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step3">
+                            <strong>3️⃣ برمجة التفاعل (Interactivity)</strong>
+                        </button>
+                    </h2>
+                    <div id="step3" class="accordion-collapse collapse" data-bs-parent="#stepsAccordion">
+                        <div class="accordion-body small">
+                            <ul>
+                                <li><strong>إجابة صحيحة:</strong> اربط بـ "Go to page" للمرحلة التالية</li>
+                                <li><strong>إجابة خاطئة:</strong> اربط بصفحة "حاول مرة أخرى"</li>
+                                <li><strong>نوافذ منبثقة (Window):</strong> لشرح معلومة عند النقر</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step4">
+                            <strong>4️⃣ إضافة الأنيميشن والمؤثرات</strong>
+                        </button>
+                    </h2>
+                    <div id="step4" class="accordion-collapse collapse" data-bs-parent="#stepsAccordion">
+                        <div class="accordion-body small">
+                            <ul>
+                                <li>اجعل الأزرار تنبض (Pulse) لجذب الانتباه</li>
+                                <li>أضف صوت "تصفيق" عند الإجابة الصحيحة</li>
+                                <li>موسيقى تشويقية عبر <strong>Insert → Audio</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step5">
+                            <strong>5️⃣ النشر والمشاركة</strong>
+                        </button>
+                    </h2>
+                    <div id="step5" class="accordion-collapse collapse" data-bs-parent="#stepsAccordion">
+                        <div class="accordion-body small">
+                            <ul>
+                                <li>اضغط <strong>All set!</strong> في الأعلى</li>
+                                <li>احصل على رابط مباشر أو كود للتضمين</li>
+                                <li>ادمجها في Google Classroom أو Microsoft Teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- التعاون الجماعي --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#DC2626">🤝 التعاون الجماعي (Collaboration)</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="d-flex gap-2">
+                        <span class="fs-4">👥</span>
+                        <div>
+                            <strong>المشروع الجماعي (Collaborators)</strong>
+                            <p class="small text-muted mb-0">اضغط على أيقونة الشخص مع "+" وأضف البريد الإلكتروني لزملائك للتعديل معاً في الوقت الفعلي.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex gap-2">
+                        <span class="fs-4">♻️</span>
+                        <div>
+                            <strong>نماذج جاهزة (Reusable)</strong>
+                            <p class="small text-muted mb-0">فعّل خيار "Reusable" من إعدادات العرض — سيتمكن الزملاء من أخذ نسخة القالب وتعديله دون التأثير على ملفك.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex gap-2">
+                        <span class="fs-4">🔗</span>
+                        <div>
+                            <strong>الدمج في المنصات (Integration)</strong>
+                            <p class="small text-muted mb-0">من Share ← Insert: انسخ كود Iframe وضعه في Moodle أو Google Classroom.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex gap-2">
+                        <span class="fs-4">🤖</span>
+                        <div>
+                            <strong>الذكاء الاصطناعي (AI Builder)</strong>
+                            <p class="small text-muted mb-0">استخدم AI Creative Assistant لتوليد نصوص وصور وأسئلة بوصف بسيط (Prompt).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- نصيحة مهمة --}}
+    <div class="alert alert-success border-0 shadow-sm mb-4">
+        <h6 class="fw-bold">💡 النصيحة الذهبية</h6>
+        <p class="mb-0">استخدم وضع <strong>Microsite</strong> في التنقل — يحول العرض من "شرائح عادية" إلى "تطبيق تعليمي ذكي" يعتمد فقط على الأزرار التي تصممها أنت، دون أسهم التالي والسابق.</p>
+    </div>
+
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold">🎬 مصادر بصرية</div>
+        <div class="card-body">
+            <div class="row g-2">
+                <div class="col-md-6"><a href="https://www.youtube.com/watch?v=AY0PILdi4iI" target="_blank" class="btn btn-outline-danger w-100">▶ فيديو 1 — دمج الوسائط</a></div>
+                <div class="col-md-6"><a href="https://www.youtube.com/watch?v=PTrv_6xiTsI" target="_blank" class="btn btn-outline-danger w-100">▶ فيديو 2 — الاختبارات التفاعلية</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center py-4">
+        <a href="/quiz/start/3" class="btn btn-lg px-5 text-white" style="background:#059669" onclick="return confirm('هل أنت مستعد لبدء اختبار هذا الموديول؟')">
+            📝 ابدأ اختبار الموديول الثالث
+        </a>
+    </div>
+
+</div>

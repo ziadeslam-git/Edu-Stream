@@ -1,0 +1,260 @@
+@* Views/Modules/Content/Module4.cshtml *@
+@{
+    ViewData["Title"] = "الموديول الرابع — مهارات الإعلام الرقمي";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="module-content" dir="rtl">
+
+    <div class="module-hero text-white rounded-4 p-4 mb-4" style="background:#DC2626">
+        <div class="d-flex align-items-center gap-3 mb-2">
+            <span class="fs-1">📡</span>
+            <div>
+                <h1 class="h3 mb-0">الموديول الرابع</h1>
+                <p class="mb-0 opacity-75">مهارات الإعلام الرقمي</p>
+            </div>
+        </div>
+        <div class="badge bg-white text-danger mt-2">الهدف العام: التعرف على مهارة الإعلام الرقمي</div>
+    </div>
+
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header bg-light fw-bold">🎯 الأهداف الخاصة الإجرائية</div>
+        <div class="card-body">
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 py-1">✅ تعريف الإعلام الرقمي بدقة</li>
+                        <li class="list-group-item border-0 py-1">✅ تعداد أشكال الإعلام الرقمي</li>
+                        <li class="list-group-item border-0 py-1">✅ استخدام الكلمات المفتاحية المناسبة</li>
+                        <li class="list-group-item border-0 py-1">✅ التمييز بين مصادر المعلومات</li>
+                        <li class="list-group-item border-0 py-1">✅ تمييز المحتوى غير المقيد (Open Access)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 py-1">✅ تصميم إنفوجرافيك تعليمي</li>
+                        <li class="list-group-item border-0 py-1">✅ إنتاج فيديوهات قصيرة بـ CapCut</li>
+                        <li class="list-group-item border-0 py-1">✅ إنشاء بودكاست في التخصص</li>
+                        <li class="list-group-item border-0 py-1">✅ إنشاء محتوى مرخص مع مراعاة حقوق النشر</li>
+                        <li class="list-group-item border-0 py-1">✅ نشر محتوى رقمي بمجتمع التعلم</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- مفهوم الإعلام الرقمي --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#DC2626">📖 أولاً: مفهوم الإعلام الرقمي وتطوره</div>
+        <div class="card-body">
+            <div class="alert alert-danger border-start border-danger border-4">
+                <strong>التعريف:</strong> الإعلام الرقمي هو الإعلام الذي يعتمد على الحاسب الآلي في إنتاج وتخزين وتوزيع المعلومات، ويتميز بارتباطه بشبكة الإنترنت والأجهزة النقالة ودمج وسائل الإعلام التقليدية مع الميزة الرقمية والتفاعلية.
+            </div>
+
+            <h6 class="fw-bold mt-3">مراحل تطور الإعلام الرقمي:</h6>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card border-secondary h-100 text-center">
+                        <div class="card-body">
+                            <div class="badge bg-secondary mb-2 fs-6">1.0</div>
+                            <h6 class="fw-bold">إعلام القراءة</h6>
+                            <p class="small text-muted">المعلم يضع المعلومة على موقع ثابت، والطالب يقرأ فقط (مثل الجريدة الإلكترونية).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-primary h-100 text-center">
+                        <div class="card-body">
+                            <div class="badge bg-primary mb-2 fs-6">2.0</div>
+                            <h6 class="fw-bold">إعلام التشاركي</h6>
+                            <p class="small text-muted">أدوات مثل Genially وCanva سمحت للمعلم بأن يكون "ناشراً" وليس مجرد "ناقل".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-success h-100 text-center">
+                        <div class="card-body">
+                            <div class="badge bg-success mb-2 fs-6">3.0</div>
+                            <h6 class="fw-bold">الذكاء والارتباط</h6>
+                            <p class="small text-muted">المنصات تفهم اهتمامات الطالب وتقترح عليه محتوى تعليمياً مخصصاً.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- الفرق بين التقليدي والرقمي --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#7C3AED">📊 ثانياً: الفرق بين الإعلام التقليدي والرقمي</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr><th>وجه المقارنة</th><th>الإعلام التقليدي</th><th>الإعلام الرقمي</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>اتجاه الاتصال</td><td>أحادي (من المعلم للطالب فقط)</td><td>متعدد الاتجاهات — تفاعلي</td></tr>
+                        <tr><td>التكلفة</td><td>عالية في الطباعة والتوزيع</td><td>منخفضة وسهلة التحديث لحظياً</td></tr>
+                        <tr><td>دور المتلقي</td><td>سلبي (مستمع فقط)</td><td>إيجابي (مشارك، مصمم، معلق)</td></tr>
+                        <tr><td>الحدود</td><td>مرتبط بالوقت والمكان</td><td>عابر للحدود — Anytime, Anywhere</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {{!-- خصائص الإعلام الرقمي --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#059669">⚡ ثالثاً: خصائص الإعلام الرقمي</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">🌍</span>
+                        <div><strong>الانتشار (Ubiquity)</strong><br><small class="text-muted">إمكانية الوصول عبر مختلف الأجهزة.</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">🤲</span>
+                        <div><strong>المشاركة (Participation)</strong><br><small class="text-muted">الطالب مشارك وليس مستقبلاً فقط.</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">✏️</span>
+                        <div><strong>التحرير المستمر (Editability)</strong><br><small class="text-muted">تعديل الدرس في ثانية لجميع الطلاب.</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">🎭</span>
+                        <div><strong>تعدد الوسائط (Hyper-multimedia)</strong><br><small class="text-muted">يدمج النص الفائق والصوت والصورة.</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">💬</span>
+                        <div><strong>التفاعلية (Interactivity)</strong><br><small class="text-muted">حوار المتعلم مع الآلة — لا ينتقل إلا إذا فعل شيئاً.</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">⚡</span>
+                        <div><strong>الآنية (Immediacy)</strong><br><small class="text-muted">30 إجابة في نفس الدقيقة — تغذية راجعة فورية.</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- إنتاج المحتوى --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#F59E0B">🎨 رابعاً: إنتاج المحتوى الإعلامي الرقمي</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card border-warning h-100">
+                        <div class="card-header bg-warning text-dark fw-bold text-center">📊 إنفوجرافيك تعليمي</div>
+                        <div class="card-body">
+                            <p class="small">تحويل المعلومات المعقدة إلى رسوم بصرية سهلة الفهم.</p>
+                            <p class="small"><strong>الأدوات:</strong> Canva, Genially, Piktochart</p>
+                            <p class="small fw-bold text-warning">قاعدة الثلاثة ألوان: لا تستخدم أكثر من 3 ألوان رئيسية!</p>
+                            <p class="small">20% نص + 80% عناصر بصرية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-danger h-100">
+                        <div class="card-header bg-danger text-white fw-bold text-center">🎬 فيديو تعليمي قصير (CapCut)</div>
+                        <div class="card-body">
+                            <ul class="small mb-0">
+                                <li>قص وترتيب المادة العلمية</li>
+                                <li>9:16 للهاتف والسوشيال ميديا</li>
+                                <li>Auto Captions (ترجمة تلقائية)</li>
+                                <li>إزالة الخلفية بدون كروما</li>
+                                <li>Voiceover مع تحسين الصوت</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-success h-100">
+                        <div class="card-header bg-success text-white fw-bold text-center">🎙️ بودكاست تعليمي</div>
+                        <div class="card-body">
+                            <ul class="small mb-0">
+                                <li>حدد التخصص الدقيق (Niche)</li>
+                                <li>اكتب نقاط رئيسية (ليس نصاً حرفياً)</li>
+                                <li>Audacity للكمبيوتر — Dolby On للهاتف</li>
+                                <li>Spotify for Podcasters للنشر (مجاني)</li>
+                                <li>يرفع تلقائياً لـ Apple وGoogle Podcasts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- حقوق النشر --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#374151">⚖️ خامساً: الملكية الفكرية وحقوق النشر</div>
+        <div class="card-body">
+            <div class="alert alert-dark border-0">
+                <strong>القاعدة الذهبية:</strong> حقوق النشر تحمي <strong>التعبير عن الفكرة</strong> وليس الفكرة نفسها.
+            </div>
+            <h6 class="fw-bold">رخص المشاع الإبداعي (Creative Commons):</h6>
+            <div class="row g-2 mb-3">
+                <div class="col-6 col-md-3">
+                    <div class="card border-0 bg-light text-center h-100">
+                        <div class="card-body py-2">
+                            <div class="fw-bold text-primary">BY — الإسناد</div>
+                            <small>استخدم مع ذكر صاحب العمل</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card border-0 bg-light text-center h-100">
+                        <div class="card-body py-2">
+                            <div class="fw-bold text-success">NC — غير تجاري</div>
+                            <small>للفصل فقط — لا للبيع</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card border-0 bg-light text-center h-100">
+                        <div class="card-body py-2">
+                            <div class="fw-bold text-warning">ND — بلا اشتقاق</div>
+                            <small>اعرض كما هو بدون تعديل</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card border-0 bg-light text-center h-100">
+                        <div class="card-body py-2">
+                            <div class="fw-bold text-danger">SA — المشاركة بالمثل</div>
+                            <small>انشر بنفس نوع الرخصة</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-success">
+                <strong>💡 مثال عملي:</strong> عند البحث عن صور للعبة سحب وإفلات، ابحث عن رخصة <strong>CC-BY</strong> لتكون في أمان قانوني تام.
+            </div>
+            <h6 class="fw-bold">مصادر المحتوى المجاني الآمن:</h6>
+            <div class="row g-2">
+                <div class="col-md-4"><a href="https://pixabay.com" target="_blank" class="btn btn-outline-success w-100">🖼️ Pixabay — صور مجانية</a></div>
+                <div class="col-md-4"><a href="https://bensound.com" target="_blank" class="btn btn-outline-primary w-100">🎵 Bensound — موسيقى مجانية</a></div>
+                <div class="col-md-4"><a href="https://creativecommons.org" target="_blank" class="btn btn-outline-warning w-100">⚖️ Creative Commons</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center py-4">
+        <a href="/quiz/start/4" class="btn btn-lg px-5 text-white" style="background:#DC2626" onclick="return confirm('هل أنت مستعد لبدء اختبار هذا الموديول؟')">
+            📝 ابدأ اختبار الموديول الرابع
+        </a>
+    </div>
+
+</div>

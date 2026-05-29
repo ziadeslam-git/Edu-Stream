@@ -1,0 +1,264 @@
+@* Views/Modules/Content/Module6.cshtml *@
+@{
+    ViewData["Title"] = "الموديول السادس — الذكاء الاصطناعي وحماية البيانات في الإعلام الرقمي";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="module-content" dir="rtl">
+
+    <div class="module-hero text-white rounded-4 p-4 mb-4" style="background:linear-gradient(135deg,#1E1B4B,#4F46E5)">
+        <div class="d-flex align-items-center gap-3 mb-2">
+            <span class="fs-1">🤖</span>
+            <div>
+                <h1 class="h3 mb-0">الموديول السادس</h1>
+                <p class="mb-0 opacity-75">الذكاء الاصطناعي وحماية البيانات في الإعلام الرقمي</p>
+            </div>
+        </div>
+        <div class="badge bg-white text-primary mt-2">الهدف العام: التعرف على دور الذكاء الاصطناعي في الإعلام الرقمي وأسس الأمن الرقمي</div>
+    </div>
+
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header bg-light fw-bold">🎯 الأهداف الخاصة الإجرائية</div>
+        <div class="card-body">
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 py-1">✅ أسس حماية البيانات الشخصية له ولطلابه</li>
+                        <li class="list-group-item border-0 py-1">✅ استخدام برامج الحماية وتجنب المواقع المشبوهة</li>
+                        <li class="list-group-item border-0 py-1">✅ السلوك الآمن في التعامل مع الإنترنت</li>
+                        <li class="list-group-item border-0 py-1">✅ حماية الأجهزة من الفيروسات والاختراق</li>
+                        <li class="list-group-item border-0 py-1">✅ استخدام كلمات مرور قوية</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 py-1">✅ مفهوم الذكاء الاصطناعي وتطبيقاته في التعليم</li>
+                        <li class="list-group-item border-0 py-1">✅ التفريق بين أنواع الذكاء الاصطناعي</li>
+                        <li class="list-group-item border-0 py-1">✅ أدوات الذكاء الاصطناعي: ChatGPT، توليد الصور</li>
+                        <li class="list-group-item border-0 py-1">✅ دمج أدوات الذكاء الاصطناعي في التدريس</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- حماية البيانات --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#DC2626">🛡️ أولاً: حماية البيانات الشخصية</div>
+        <div class="card-body">
+            <div class="alert alert-danger border-0">
+                <strong>أمانة أخلاقية وقانونية:</strong> حماية بيانات الطلاب ليست إجراءً تقنياً فحسب، بل المعلم مسؤول قانونياً عن البيانات التي يجمعها.
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card border-danger h-100">
+                        <div class="card-header bg-danger text-white text-center fw-bold">👨‍🏫 حماية بيانات المعلم</div>
+                        <div class="card-body">
+                            <ul class="small mb-0">
+                                <li><strong>الفصل بين الشخصي والمهني:</strong> بريد رسمي للمنصات التعليمية</li>
+                                <li><strong>كلمات مرور معقدة:</strong> رموز + أرقام + حروف كبيرة وصغيرة</li>
+                                <li><strong>المصادقة الثنائية (2FA):</strong> تمنع 99% من الاختراقات</li>
+                                <li><strong>تجنب Phishing:</strong> لا تضغط روابط مجهولة تدعي "تحديثات"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-warning h-100">
+                        <div class="card-header bg-warning text-dark text-center fw-bold">👨‍🎓 حماية بيانات الطلاب</div>
+                        <div class="card-body">
+                            <ul class="small mb-0">
+                                <li><strong>الحد الأدنى من البيانات:</strong> في Forms لا تطلب رقم الهاتف أو العنوان</li>
+                                <li><strong>الصور والفيديوهات:</strong> لا تنشر صور الطلاب بدون إذن رسمي</li>
+                                <li><strong>إعدادات Classroom:</strong> أغلق رؤية الطلاب لإيميلات بعضهم</li>
+                                <li><strong>التخلص الآمن:</strong> امسح سجلات الاختبارات بعد انتهاء العام</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-info h-100">
+                        <div class="card-header bg-info text-white text-center fw-bold">📱 التطبيقات الخارجية</div>
+                        <div class="card-body">
+                            <ul class="small mb-0">
+                                <li>اقرأ سياسة الخصوصية — هل يبيع البيانات؟</li>
+                                <li>أذونات CapCut: لا تعطه صلاحية "كل الصور"</li>
+                                <li>تأكد أن الرابط يبدأ بـ <strong>https://</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- قائمة تفقد --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#374151">✅ قائمة تفقد (Checklist) للمعلم والطالب</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr><th>الإجراء</th><th class="text-center">المعلم</th><th class="text-center">الطالب</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>استخدام كلمة مرور قوية ومتغيرة</td><td class="text-center">✅</td><td class="text-center">✅</td></tr>
+                        <tr><td>تجنب نشر الموقع الجغرافي</td><td class="text-center">✅</td><td class="text-center">✅</td></tr>
+                        <tr><td>عدم مشاركة كلمة المرور</td><td class="text-center">✅</td><td class="text-center">✅</td></tr>
+                        <tr><td>إغلاق الكاميرا عند عدم الحاجة</td><td class="text-center">✅</td><td class="text-center">✅</td></tr>
+                        <tr><td>استشارة المعلم قبل التسجيل في موقع جديد</td><td class="text-center">➖</td><td class="text-center">✅</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {{!-- السلوك الآمن --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#4F46E5">🔐 ثانياً: السلوك الآمن على الإنترنت (Cyber Hygiene)</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <h6 class="fw-bold">1️⃣ إدارة الهوية الرقمية</h6>
+                    <ul class="small">
+                        <li>كلمة المرور يجب أن تكون "جملة" لا كلمة واحدة</li>
+                        <li>لا تستخدم نفس كلمة مرور الإيميل في CapCut</li>
+                        <li><strong>المصادقة الثنائية (MFA):</strong> تمنع 99% من الاختراقات</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="fw-bold">2️⃣ التصفح الآمن</h6>
+                    <ul class="small">
+                        <li>قاعدة "فكر قبل النقر" — لا تفتح روابط مجهولة</li>
+                        <li>استخدم <a href="https://www.virustotal.com" target="_blank">VirusTotal</a> لفحص الروابط المشكوك فيها</li>
+                        <li>لا تحمّل برامج "مكركة" — مصدر أول للفيروسات</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="fw-bold">3️⃣ الخصوصية والحدود الرقمية</h6>
+                    <ul class="small">
+                        <li>أوقف تحديد الموقع الجغرافي في تطبيقات الكاميرا</li>
+                        <li>راجع الصلاحيات: لماذا يطلب تطبيق "آلة حاسبة" الوصول للكاميرا؟</li>
+                        <li>سجّل الخروج من الأجهزة المشتركة في المدرسة</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="fw-bold">4️⃣ قاعدة النسخ الاحتياطي 3-2-1</h6>
+                    <ul class="small">
+                        <li>3 نسخ من الملفات الهامة</li>
+                        <li>على نوعين من الوسائط (هارد + سحابة)</li>
+                        <li>نسخة خارج مكان العمل (Google Drive أو OneDrive)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- جدول افعل ولا تفعل --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold">💡 جدول "افعل ولا تفعل" للسلوك الآمن</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="bg-success text-white text-center">✅ افعل (Do)</th>
+                            <th class="bg-danger text-white text-center">❌ لا تفعل (Don't)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>استخدم برامج حماية أصلية ومحدثة</td>
+                            <td>لا تستخدم كلمة مرور واحدة لكل الحسابات</td>
+                        </tr>
+                        <tr>
+                            <td>عمل نسخة احتياطية لملفاتك (Cloud/Drive)</td>
+                            <td>لا تشارك كود التحقق (OTP) مع أي شخص</td>
+                        </tr>
+                        <tr>
+                            <td>سجل الخروج من الأجهزة العامة في المدرسة</td>
+                            <td>لا تفتح روابط "مبروك لقد ربحت"</td>
+                        </tr>
+                        <tr>
+                            <td>تأكد من وجود القفل 🔒 بجانب رابط الموقع</td>
+                            <td>لا تترك الكاميرا مفتوحة بدون غطاء مادي</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {{!-- الذكاء الاصطناعي --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:linear-gradient(135deg,#4F46E5,#7C3AED)">🤖 ثالثاً: الذكاء الاصطناعي في الإعلام والتعليم</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100 text-center">
+                        <div class="card-body">
+                            <div class="fs-2 mb-2">💬</div>
+                            <h6 class="fw-bold">ChatGPT</h6>
+                            <p class="small text-muted">توليد خطط دروس، أسئلة اختبارات، شرح مفاهيم، تلخيص محتوى — بضغطة زر.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100 text-center">
+                        <div class="card-body">
+                            <div class="fs-2 mb-2">🖼️</div>
+                            <h6 class="fw-bold">توليد الصور (AI Image)</h6>
+                            <p class="small text-muted">إنشاء صور توضيحية لمفاهيم علمية دون الحاجة لمصمم — Midjourney، DALL·E، Canva AI.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100 text-center">
+                        <div class="card-body">
+                            <div class="fs-2 mb-2">✏️</div>
+                            <h6 class="fw-bold">أدوات التصحيح الآلي</h6>
+                            <p class="small text-muted">Grammarly للكتابة الصحيحة — Google Forms للتصحيح التلقائي — AI Builder في Genially.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-warning mt-3">
+                <h6 class="fw-bold">⚠️ تحذير: الاستخدام الواعي للذكاء الاصطناعي</h6>
+                <ul class="small mb-0">
+                    <li>هل ما ينتجه الذكاء الاصطناعي له حقوق ملكية فكرية؟ — سؤال قانوني لا يزال مطروحاً</li>
+                    <li>درّب طلابك على "الإسناد الرقمي" — ذكر المصادر حتى المولّدة بالذكاء الاصطناعي</li>
+                    <li>لا تنشر بيانات شخصية للطلاب في نماذج الذكاء الاصطناعي العامة</li>
+                </ul>
+            </div>
+
+            <div class="alert alert-info mt-3">
+                <h6 class="fw-bold">🔍 تحقق من أمان بريدك الإلكتروني</h6>
+                <p class="small mb-2">ادخل على <a href="https://haveibeenpwned.com" target="_blank">Have I Been Pwned</a> واكتب بريدك — سيخبرك إذا كان قد تعرض للتسريب في اختراقات سابقة.</p>
+            </div>
+        </div>
+    </div>
+
+    {{!-- نشاط ختامي --}}
+    <div class="card mb-4 border-0 shadow-sm border-primary">
+        <div class="card-header bg-primary text-white fw-bold">🎯 نشاط: لعبة "اكتشف الفخ"</div>
+        <div class="card-body">
+            <p>يعرض المدرّب على المعلمين صوراً لرسائل بريد إلكتروني وروابط (بعضها حقيقي وبعضها مزيف).</p>
+            <p class="fw-bold">الهدف: استخراج الأدلة التي تثبت أن الرابط مشبوه:</p>
+            <ul>
+                <li>خطأ إملائي في اسم الموقع (مثل g00gle.com)</li>
+                <li>غياب حرف S في البروتوكول (http بدل https)</li>
+                <li>طلب بيانات حساسة بشكل مفاجئ</li>
+                <li>إعلانات منبثقة "جهازك مصاب"</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="text-center py-4">
+        <a href="/quiz/start/6" class="btn btn-lg px-5 text-white" style="background:linear-gradient(135deg,#4F46E5,#7C3AED)" onclick="return confirm('هل أنت مستعد لبدء اختبار الموديول الأخير؟')">
+            📝 ابدأ اختبار الموديول السادس
+        </a>
+    </div>
+
+</div>

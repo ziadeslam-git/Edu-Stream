@@ -1,0 +1,210 @@
+@* Views/Modules/Content/Module2.cshtml *@
+@{
+    ViewData["Title"] = "الموديول الثاني — مهارة تصميم الألعاب التعليمية";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="module-content" dir="rtl">
+
+    <div class="module-hero text-white rounded-4 p-4 mb-4" style="background:#7C3AED">
+        <div class="d-flex align-items-center gap-3 mb-2">
+            <span class="fs-1">🕹️</span>
+            <div>
+                <h1 class="h3 mb-0">الموديول الثاني</h1>
+                <p class="mb-0 opacity-75">مهارة تصميم الألعاب التعليمية باستخدام برنامج Genially</p>
+            </div>
+        </div>
+        <div class="badge bg-white text-purple mt-2" style="color:#7C3AED">الهدف العام: اكتساب مهارات تصميم الألعاب باستخدام برنامج Genially</div>
+    </div>
+
+    {{!-- OBJECTIVES --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header bg-light fw-bold">🎯 الأهداف الخاصة الإجرائية</div>
+        <div class="card-body">
+            <p class="text-muted">عزيزي المعلم، بعد دراستك لهذا الموديول يجب أن تكون قادراً على:</p>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item border-0 py-1">✅ تصميم ألعاب السحب والإفلات</li>
+                <li class="list-group-item border-0 py-1">✅ إنشاء ألعاب متعددة الاختيارات</li>
+                <li class="list-group-item border-0 py-1">✅ إنشاء المتاهات التفاعلية والبطاقات المخفية</li>
+                <li class="list-group-item border-0 py-1">✅ استخدام الجداول الزمنية والألعاب التفاعلية (Timelines)</li>
+                <li class="list-group-item border-0 py-1">✅ تصميم ألعاب: افتح الصندوق – بطاقات الذاكرة – من سيربح المليون</li>
+                <li class="list-group-item border-0 py-1">✅ إنشاء مستويات ونقاط</li>
+                <li class="list-group-item border-0 py-1">✅ إضافة مؤثرات صوتية أو موسيقى خلفية مناسبة</li>
+                <li class="list-group-item border-0 py-1">✅ إدراج تسجيلات صوتية بصوت المعلم</li>
+            </ul>
+        </div>
+    </div>
+
+    {{!-- SKILL 1: السحب والإفلات --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#7C3AED">🖱️ المهارة الأولى: السحب والإفلات (Drag & Drop)</div>
+        <div class="card-body">
+            <p class="text-muted">تُستخدم لتصنيف الكلمات، تركيب الصور، أو حل الألغاز.</p>
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <div class="card text-center border-primary h-100">
+                        <div class="card-body">
+                            <div class="badge bg-primary rounded-circle mb-2" style="width:40px;height:40px;line-height:40px;font-size:1.2rem">1</div>
+                            <p class="small mb-0">حدد العنصر (صورة أو نص) الذي تريد تحريكه</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-primary h-100">
+                        <div class="card-body">
+                            <div class="badge bg-primary rounded-circle mb-2" style="width:40px;height:40px;line-height:40px;font-size:1.2rem">2</div>
+                            <p class="small mb-0">اضغط على أيقونة <strong>"اليد" (Drag)</strong> التي تظهر فوق العنصر</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-primary h-100">
+                        <div class="card-body">
+                            <div class="badge bg-primary rounded-circle mb-2" style="width:40px;height:40px;line-height:40px;font-size:1.2rem">3</div>
+                            <p class="small mb-0">اذهب للإعدادات (⚙️) وفعّل خيار <strong>"Drag elements"</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-success h-100">
+                        <div class="card-body">
+                            <div class="fs-2">✅</div>
+                            <p class="small mb-0">الآن يمكن للطالب سحب العناصر داخل اللعبة!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- SKILL 2: الصوت --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#059669">🎙️ المهارة الثانية: إضافة الصوت والتسجيل</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <h6 class="fw-bold">🎤 تسجيل صوتك:</h6>
+                            <ol class="small">
+                                <li>اضغط على قائمة <strong>Insert</strong></li>
+                                <li>اختر <strong>Audio</strong></li>
+                                <li>اضغط على الميكروفون وابدأ التسجيل</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <h6 class="fw-bold">🎵 موسيقى خلفية:</h6>
+                            <ol class="small">
+                                <li>ارفع ملف الصوت من جهازك</li>
+                                <li>اسحبه إلى مساحة العمل</li>
+                                <li>فعّل: <strong>Autoplay</strong> + <strong>Loop</strong> + <strong>Hide player</strong></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- SKILL 3: افتح الصندوق --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#DC2626">📦 المهارة الثالثة: ألعاب "افتح الصندوق" والبطاقات المخفية</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-3 text-center">
+                    <div class="card border-danger h-100">
+                        <div class="card-body"><strong>الخطوة 1</strong><br><small>ضع صورة الصندوق أو البطاقة في المقدمة</small></div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="card border-danger h-100">
+                        <div class="card-body"><strong>الخطوة 2</strong><br><small>ضع الإجابة أو المعلومة خلفها تماماً</small></div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="card border-danger h-100">
+                        <div class="card-body"><strong>الخطوة 3</strong><br><small>اضغط على صورة الصندوق ثم اختر أيقونة التفاعل (Interactivity)</small></div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="card border-success h-100">
+                        <div class="card-body"><strong>الخطوة 4</strong><br><small>اختر "Window" واكتب المعلومة، أو اختر "Animation" ليختفي الصندوق عند النقر</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- SKILL 4: من سيربح المليون --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#F59E0B">🏆 المهارة الرابعة: مسابقة "من سيربح المليون"</div>
+        <div class="card-body">
+            <p class="text-muted">تعتمد على التنقل المشروط بين الصفائح.</p>
+            <div class="alert alert-warning">
+                <strong>💡 الفكرة الأساسية:</strong> كل إجابة صحيحة → ينتقل للسؤال التالي. كل إجابة خاطئة → يذهب لصفحة "حاول مرة أخرى".
+            </div>
+            <ol>
+                <li>صمم شريحة لكل سؤال</li>
+                <li>عند الإجابة الصحيحة: اربط الزر بـ <strong>"Go to page"</strong></li>
+                <li>عند الإجابة الخاطئة: اربطه بصفحة "حاول مرة أخرى"</li>
+                <li><strong>(الاحترافية)</strong>: من قائمة Navigation، اختر نمط <strong>"Microsite"</strong></li>
+            </ol>
+        </div>
+    </div>
+
+    {{!-- SKILL 5: المتاهة --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#6366F1">🌀 المهارة الخامسة: إنشاء المتاهة التفاعلية</div>
+        <div class="card-body">
+            <div class="alert alert-info">
+                <strong>السر في "Invisible Area":</strong> من قائمة Interactive Elements، اختر "Invisible Area" — ارسم مسارات المتاهة، وأي مساحة خارج المسار قم بتغطيتها بالمنطقة الشفافة واربطها بـ "العودة لصفحة البداية".
+            </div>
+            <p>إذا لمس الطالب الجدار الشفاف، سيخسر ويعود للبداية! 🎮</p>
+        </div>
+    </div>
+
+    {{!-- QUICK REFERENCE TABLE --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold">📋 لوحة مرجعية سريعة للأيقونات</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr><th>الأيقونة</th><th>الوظيفة</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>✋ <strong>Interactivity</strong></td><td>تجعل العنصر ينطق، يفتح نافذة، أو ينقلك لصفحة أخرى</td></tr>
+                        <tr><td>☄️ <strong>Animation</strong></td><td>تجعل العناصر تتحرك (دخول، خروج، أو حركة مستمرة)</td></tr>
+                        <tr><td>🖱️ <strong>Drag</strong></td><td>تسمح للطالب بتحريك الأجسام داخل اللعبة</td></tr>
+                        <tr><td>➕ <strong>Insert</strong></td><td>لإضافة فيديو، تسجيل صوتي، أو كود برمجي خارجي</td></tr>
+                        <tr><td>📋 <strong>Templates</strong></td><td>لعمل جداول زمنية (Timelines) جاهزة بضغطة واحدة</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {{!-- VIDEO RESOURCES --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold">🎬 مصادر بصرية — فيديوهات تعليمية</div>
+        <div class="card-body">
+            <div class="row g-2">
+                <div class="col-md-6"><a href="https://www.youtube.com/watch?v=iYNMe1Ohwbo" target="_blank" class="btn btn-outline-danger w-100">▶ فيديو 1 — تصميم الألعاب</a></div>
+                <div class="col-md-6"><a href="https://www.youtube.com/watch?v=DRI5OJK1nIQ" target="_blank" class="btn btn-outline-danger w-100">▶ فيديو 2 — إنشاء بريزنتيشن</a></div>
+                <div class="col-md-6"><a href="https://www.youtube.com/watch?v=hWIxEr4G3EQ" target="_blank" class="btn btn-outline-danger w-100">▶ فيديو 3 — Genially</a></div>
+                <div class="col-md-6"><a href="https://www.youtube.com/watch?v=LroSgdAdqjk" target="_blank" class="btn btn-outline-danger w-100">▶ فيديو 4 — متقدم</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center py-4">
+        <a href="/quiz/start/2" class="btn btn-lg px-5 text-white" style="background:#7C3AED" onclick="return confirm('هل أنت مستعد لبدء اختبار هذا الموديول؟')">
+            📝 ابدأ اختبار الموديول الثاني
+        </a>
+    </div>
+
+</div>

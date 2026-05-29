@@ -1,0 +1,333 @@
+@* Views/Modules/Content/Module1.cshtml *@
+@{
+    ViewData["Title"] = "الموديول الأول — المفاهيم الأساسية في إنتاج برامج التلعيب";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="module-content" dir="rtl">
+
+    {{!-- HERO --}}
+    <div class="module-hero bg-primary text-white rounded-4 p-4 mb-4">
+        <div class="d-flex align-items-center gap-3 mb-2">
+            <span class="fs-1">🎮</span>
+            <div>
+                <h1 class="h3 mb-0">الموديول الأول</h1>
+                <p class="mb-0 opacity-75">المفاهيم الأساسية في إنتاج برامج التلعيب وبعض مهارات استخدام برنامج Genially</p>
+            </div>
+        </div>
+        <div class="badge bg-white text-primary mt-2">الهدف العام: الحصول على المعارف والحقائق العلمية المتعلقة بإنتاج برامج التلعيب</div>
+    </div>
+
+    {{!-- OBJECTIVES --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header bg-light fw-bold">🎯 الأهداف الخاصة الإجرائية</div>
+        <div class="card-body">
+            <p class="text-muted">عزيزي المتدرب، بعد دراستك لهذا الموديول يرجى أن تكون قادراً على:</p>
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 py-1">✅ تعريف التلعيب بدقة</li>
+                        <li class="list-group-item border-0 py-1">✅ تعداد أنواع التلعيب</li>
+                        <li class="list-group-item border-0 py-1">✅ شرح خصائص برامج التلعيب</li>
+                        <li class="list-group-item border-0 py-1">✅ بيان فوائد برامج التلعيب</li>
+                        <li class="list-group-item border-0 py-1">✅ إنشاء حساب لتسجيل الدخول على Genially</li>
+                        <li class="list-group-item border-0 py-1">✅ تحليل مكونات لوحة الأيقونات</li>
+                        <li class="list-group-item border-0 py-1">✅ التعرف على الأدوات (الشريط العلوي والجانبي)</li>
+                        <li class="list-group-item border-0 py-1">✅ اختيار قالب مناسب (عرض تقديمي، لعبة، خريطة ذهنية)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 py-1">✅ التحكم في الخلفيات وتنسيق الشرائح</li>
+                        <li class="list-group-item border-0 py-1">✅ التعرف على أدوات الإضافة (نص، صورة، فيديو، أيقونات)</li>
+                        <li class="list-group-item border-0 py-1">✅ استخدام الطبقات (Layers) لتنظيم العناصر</li>
+                        <li class="list-group-item border-0 py-1">✅ تنسيق النصوص (الحجم، اللون، المحاذاة)</li>
+                        <li class="list-group-item border-0 py-1">✅ إدراج الأشكال والصور من مكتبة البرنامج أو من الجهاز</li>
+                        <li class="list-group-item border-0 py-1">✅ شرح الأوامر الموجودة في قائمة Transaction</li>
+                        <li class="list-group-item border-0 py-1">✅ توضيح استخدامات قائمة Animations</li>
+                        <li class="list-group-item border-0 py-1">✅ استخدام الطبقات ومحاذاة العناصر</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- SECTION 1: تعريف التلعيب --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#4F46E5">📖 أولاً: تعريف التلعيب</div>
+        <div class="card-body">
+            <p>أدى التقدم التقني والتطور التكنولوجي إلى ظهور العديد من طرق وإستراتيجيات التعليم الجديدة التي تسهم في زيادة دافعية الطلاب نحو التعلم، وتجعل التعلم أكثر متعة وتحفيزاً وتشويقاً.</p>
+            <div class="alert alert-primary border-start border-primary border-4">
+                <strong>التعريف:</strong> التلعيب هو تطبيق عناصر اللعبة وتقنيات التصميم الرقمي للألعاب في تحقيق أهداف وحل مشاكل في ميادين أخرى خارج سياق الألعاب مثل الإعلام والتسويق والتعليم.
+            </div>
+            <p>والتلعيب في التعليم هو منحى تعليمي لتحفيز الطلاب على التعلم باستخدام عناصر الألعاب في بيئات التعلم، بهدف تحقيق أقصى قدر من المتعة والمشاركة من خلال جذب اهتمام المتعلمين لمواصلة التعلم.</p>
+            <h6 class="fw-bold mt-3">يمكن تحقيق التلعيب في التعليم من خلال:</h6>
+            <ul>
+                <li>إضافة نقاط إلى المهام والواجبات الدراسية</li>
+                <li>تحديد شارات ومنحها للمتفوقين بعد استيفاء معايير محددة</li>
+                <li>إنشاء اللائحة الترتيبية للطلاب المتفوقين</li>
+                <li>تحديد مستويات لتكرار المهام أو أداء مهام أصعب</li>
+                <li>ربط الشارات المحصل عليها بالدخول إلى مستويات أعلى</li>
+            </ul>
+        </div>
+    </div>
+
+    {{!-- SECTION 2: أنواع التلعيب --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#7C3AED">🔢 ثانياً: أنواع التلعيب الرئيسية</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-primary">التلعيب الهيكلي (Structural)</h6>
+                            <p class="small">استخدام عناصر الألعاب دون تغيير المحتوى نفسه، بل إضافته كإطار تحفيزي.</p>
+                            <p class="small text-muted"><strong>أمثلة:</strong> النقاط (Points)، الشارات (Badges)، لوحات الصدارة (Leaderboards)، المستويات (Levels)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-success">التلعيب المحتوي (Content)</h6>
+                            <p class="small">دمج عناصر اللعبة داخل المحتوى التعليمي لتغيير طريقة تقديمه وجعله أكثر تفاعلية.</p>
+                            <p class="small text-muted"><strong>أمثلة:</strong> القصص (Narrative)، الشخصيات الرمزية (Avatars)، التحديات والمغامرات</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-warning">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-warning">التلعيب الاجتماعي (Social)</h6>
+                            <p class="small">يركز على التفاعل والتعاون بين المشاركين لتعزيز روح الفريق والمنافسة الودية.</p>
+                            <p class="small text-muted"><strong>أمثلة:</strong> العمل الجماعي، المسابقات، التعليقات الفورية من الأقران</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- SECTION 3: فوائد التلعيب --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#059669">🌟 ثالثاً: فوائد استخدام برامج التلعيب في التعليم</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">🎯</span>
+                        <div><strong>تعزيز الانخراط في التعلم</strong><br><small class="text-muted">يقدم عناصر مثل النقاط والأوسمة والمكافآت التي تلبي الرغبة المتأصلة في الإنجاز والتقدير.</small></div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">🧠</span>
+                        <div><strong>تحسين الحفظ والفهم</strong><br><small class="text-muted">المشاركة النشطة تؤدي إلى تحسين استيعاب الطالب للموضوع وفهمه فهماً أعمق.</small></div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">🛤️</span>
+                        <div><strong>تهيئة مسارات التعلم الشخصية</strong><br><small class="text-muted">يمكن للطلاب التقدم بالسرعة التي تناسبهم وتلقي تعليقات فورية بشأن أدائهم.</small></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">🤝</span>
+                        <div><strong>توطيد روح التعاون</strong><br><small class="text-muted">طبيعة الألعاب التفاعلية توطد روح التعاون والعمل الجماعي.</small></div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">💡</span>
+                        <div><strong>تطبيق المعارف النظرية عملياً</strong><br><small class="text-muted">غالباً ما يحاكي أسلوب اللعب سيناريوهات العالم الحقيقي.</small></div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="fs-4">😌</span>
+                        <div><strong>الحد من قلق التعلم</strong><br><small class="text-muted">يقدم عنصراً من المرح والإثارة مما يخفف التوتر ويخلق ارتباطاً إيجابياً بالتعلم.</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- SECTION 4: تطبيقات التلعيب --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#DC2626">📱 رابعاً: تطبيقات توظف التلعيب في التعليم</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100">
+                        <div class="card-body text-center">
+                            <div class="fs-2 mb-2">🐶</div>
+                            <h6 class="fw-bold">ClassDojo</h6>
+                            <p class="small text-muted">يساعد المعلمين على إدارة الفصول بتسجيل السلوكيات الإيجابية والسلبية ومشاركتها مع أولياء الأمور.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100">
+                        <div class="card-body text-center">
+                            <div class="fs-2 mb-2">🦉</div>
+                            <h6 class="fw-bold">Duolingo</h6>
+                            <p class="small text-muted">تطبيق مرح لتعلم اللغات عن طريق جمع النقاط للانتقال إلى مستويات أعلى.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100">
+                        <div class="card-body text-center">
+                            <div class="fs-2 mb-2">❓</div>
+                            <h6 class="fw-bold">Kahoot!</h6>
+                            <p class="small text-muted">يسمح للمعلمين بتحويل المهام الدراسية إلى ألعاب مسلية وتحديات خلال وقت محدد.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100">
+                        <div class="card-body text-center">
+                            <div class="fs-2 mb-2">📊</div>
+                            <h6 class="fw-bold">Quizizz</h6>
+                            <p class="small text-muted">يسمح للمعلمين بتحويل الأنشطة التعليمية إلى اختبارات ممتعة ومشاركتها.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100">
+                        <div class="card-body text-center">
+                            <div class="fs-2 mb-2">⚔️</div>
+                            <h6 class="fw-bold">Classcraft</h6>
+                            <p class="small text-muted">يتيح للمعلمين تغيير طريقة التعليم إلى أسلوب لعب الأدوار بشكل جماعي.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-primary text-white h-100">
+                        <div class="card-body text-center">
+                            <div class="fs-2 mb-2">✨</div>
+                            <h6 class="fw-bold">Genially</h6>
+                            <p class="small opacity-75">منصة إلكترونية لتصميم محتوى تفاعلي وجذاب بصرياً بسهولة — الأداة الرئيسية في هذا الموديول!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- SECTION 5: برنامج Genially --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold text-white" style="background:#F97316">⚙️ خامساً: مهارات التأسيس في بيئة Genially</div>
+        <div class="card-body">
+
+            <h6 class="fw-bold border-bottom pb-2">🔹 أهم خصائص برامج التلعيب:</h6>
+            <ul class="mb-4">
+                <li><strong>أنظمة التحفيز والمكافآت:</strong> نقاط، شارات، لوحات صدارة لتعزيز السلوك الإيجابي</li>
+                <li><strong>التغذية الراجعة الفورية:</strong> تقييم فوري لأداء المتعلم لتعديل المسار</li>
+                <li><strong>المستويات والتدرج في الصعوبة:</strong> تصميم يزيد التحدي تدريجياً</li>
+                <li><strong>عناصر السرد والقصص (Storytelling):</strong> قصة أو سيناريو يجذب المتعلم</li>
+                <li><strong>التخصيص والمرونة:</strong> تجربة تعلم تناسب كل متعلم</li>
+                <li><strong>التجريب والمجازفة الآمنة:</strong> تشجيع التعلم من الأخطاء دون خوف</li>
+            </ul>
+
+            <h6 class="fw-bold border-bottom pb-2">🔹 مميزات برنامج Genially:</h6>
+            <div class="row g-2 mb-4">
+                <div class="col-6 col-md-3">
+                    <div class="badge bg-primary w-100 p-2 fs-6">تفاعل عالي</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="badge bg-success w-100 p-2 fs-6">سهولة الاستخدام</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="badge bg-warning text-dark w-100 p-2 fs-6">قوالب متنوعة</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="badge bg-info w-100 p-2 fs-6">تعاون مباشر</div>
+                </div>
+            </div>
+
+            <h6 class="fw-bold border-bottom pb-2">🔹 أدوات الشريط الجانبي في Genially:</h6>
+            <div class="table-responsive">
+                <table class="table table-bordered table-sm">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>الأداة</th>
+                            <th>الوظيفة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Text (النص)</strong></td><td>لإضافة العناوين والفقرات بتنسيقات جاهزة</td></tr>
+                        <tr><td><strong>Image (الصور)</strong></td><td>رفع صور أو استخدام مكتبة البرنامج</td></tr>
+                        <tr><td><strong>Resources (الموارد)</strong></td><td>أشكال هندسية، أيقونات، رسوم توضيحية</td></tr>
+                        <tr><td><strong>Interactive Elements</strong></td><td>أزرار، علامات تحديد، روابط اجتماعية</td></tr>
+                        <tr><td><strong>Smartblocks (البلوكات الذكية)</strong></td><td>مجموعات تصميم جاهزة توفر وقت التنسيق</td></tr>
+                        <tr><td><strong>Insert (إدراج)</strong></td><td>ملفات صوتية، فيديوهات، أكواد من مواقع أخرى</td></tr>
+                        <tr><td><strong>Background (الخلفية)</strong></td><td>تغيير خلفية لوحة العمل</td></tr>
+                        <tr><td><strong>AI Builder</strong></td><td>توليد نصوص وصور وأسئلة بضغطة زر</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h6 class="fw-bold border-bottom pb-2 mt-3">🔹 الأيقونات الذكية في Genially:</h6>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card border-primary">
+                        <div class="card-body text-center">
+                            <div class="fs-2">✋</div>
+                            <strong>Interactivity (اليد)</strong>
+                            <p class="small text-muted mt-1">تجعل العنصر ينطق، يفتح نافذة، أو ينقلك لصفحة أخرى</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-warning">
+                        <div class="card-body text-center">
+                            <div class="fs-2">☄️</div>
+                            <strong>Animation (الشهاب)</strong>
+                            <p class="small text-muted mt-1">تجعل العناصر تتحرك (دخول، خروج، أو حركة مستمرة)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-success">
+                        <div class="card-body text-center">
+                            <div class="fs-2">🖱️</div>
+                            <strong>Drag (السحب)</strong>
+                            <p class="small text-muted mt-1">تسمح للطالب بتحريك الأجسام داخل اللعبة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- VIDEO RESOURCES --}}
+    <div class="card mb-4 border-0 shadow-sm">
+        <div class="card-header fw-bold">🎬 محتوى بصري — مصادر تعليمية</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <a href="https://youtube.com/shorts/SrXxxty-L7k" target="_blank" class="btn btn-outline-danger w-100">
+                        ▶ فيديو تعليمي 1 — YouTube
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://youtube.com/shorts/3YqIrVkQF_E" target="_blank" class="btn btn-outline-danger w-100">
+                        ▶ فيديو تعليمي 2 — YouTube
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://www.youtube.com/watch?v=mFfkJdeB640" target="_blank" class="btn btn-outline-danger w-100">
+                        ▶ شرح Genially الكامل
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://bulky-lion-fol0gvj.gamma.site/" target="_blank" class="btn btn-outline-primary w-100">
+                        🤖 عرض بالذكاء الاصطناعي
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- CTA: START QUIZ --}}
+    <div class="text-center py-4">
+        <a href="/quiz/start/1" class="btn btn-primary btn-lg px-5" onclick="return confirm('هل أنت مستعد لبدء اختبار هذا الموديول؟')">
+            📝 ابدأ اختبار الموديول الأول
+        </a>
+    </div>
+
+</div>
