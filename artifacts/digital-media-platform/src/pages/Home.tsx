@@ -5,33 +5,75 @@ import { motion } from "framer-motion";
 import { modules } from "@/data/modules";
 import { ModuleCard } from "@/components/ModuleCard";
 import { BookOpen, GraduationCap, Users, PlayCircle } from "lucide-react";
+import { ShaderBackground } from "@/components/ShaderBackground";
+import { useUser } from "@clerk/react";
 
 export default function Home() {
+  const { user } = useUser();
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background pt-24 pb-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background z-0" />
+        <div className="absolute inset-0 z-0">
+          <ShaderBackground />
+          {/* Transparent overlay for readability */}
+          <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]" />
+        </div>
+        {/* Realistic Torn Paper Edge Divider */}
+        <div className="absolute bottom-[0px] left-0 w-full h-[60px] z-20 pointer-events-none translate-y-[2px]">
+          <svg width="0" height="0" className="absolute">
+            <defs>
+              <filter id="home-torn-paper-edge" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015 0.08" numOctaves="4" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="35" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              <filter id="home-torn-paper-edge-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015 0.08" numOctaves="4" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="45" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+          </svg>
+          
+          {/* Back layer for 3D depth/shadow effect of the tear */}
+          <div 
+            className="absolute top-[20px] left-[-2%] w-[104%] h-[60px] bg-black/20 dark:bg-white/10"
+            style={{ filter: "url(#home-torn-paper-edge-shadow)" }}
+          />
+          
+          {/* Main paper color layer (matches the next section's background) */}
+          <div 
+            className="absolute top-[25px] left-[-2%] w-[104%] h-[60px] bg-slate-50 dark:bg-slate-950"
+            style={{ filter: "url(#home-torn-paper-edge)" }}
+          />
+        </div>
+        
         <div className="container relative z-10 px-4 mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Badge variant="outline" className="mb-6 border-primary/20 text-primary bg-primary/5 px-4 py-1.5 text-sm rounded-full">
+            <Badge variant="outline" className="mb-6 border-white/20 text-white bg-white/10 px-4 py-1.5 text-sm rounded-full backdrop-blur-sm">
               تطوير المعلمين في العصر الرقمي
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
-              منصة مهارات <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">الإعلام الرقمي</span>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-md">
+              منصة مهارات <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-500">الإعلام الرقمي</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-sm">
               منصة تعليمية متطورة لمعلمي المرحلة الثانوية لاكتساب مهارات الإعلام الرقمي والتلعيب عبر 6 موديولات متكاملة.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" asChild className="w-full sm:w-auto text-lg px-8 h-14 rounded-full" data-testid="hero-start-learning">
-                <Link href="/sign-in">ابدأ رحلة التعلم</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto text-lg px-8 h-14 rounded-full" data-testid="hero-about">
+              {user ? (
+                <Button size="lg" asChild className="w-full sm:w-auto text-lg px-8 h-14 rounded-full" data-testid="hero-start-learning">
+                  <Link href="/modules">متابعة التعلم</Link>
+                </Button>
+              ) : (
+                <Button size="lg" asChild className="w-full sm:w-auto text-lg px-8 h-14 rounded-full" data-testid="hero-start-learning">
+                  <Link href="/sign-in">ابدأ رحلة التعلم</Link>
+                </Button>
+              )}
+              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto text-lg px-8 h-14 rounded-full bg-background/50 backdrop-blur-sm" data-testid="hero-about">
                 <Link href="/about">عن المنصة</Link>
               </Button>
             </div>
@@ -63,7 +105,7 @@ export default function Home() {
       </section>
 
       {/* Preview Section */}
-      <section className="py-24 bg-muted/30 border-t">
+      <section className="py-24 bg-slate-50 dark:bg-slate-950 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">الموديولات التعليمية</h2>

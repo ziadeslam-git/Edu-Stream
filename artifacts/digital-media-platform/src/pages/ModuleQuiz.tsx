@@ -118,23 +118,42 @@ export default function ModuleQuiz() {
                       const isSelected = answers[q.id] === optIndex;
                       const isActualCorrect = q.correct === optIndex;
                       
-                      let labelClass = "cursor-pointer leading-relaxed ";
+                      let containerClass = "flex items-start gap-4 p-4 rounded-xl border-2 transition-all duration-300 cursor-pointer ";
                       if (isSubmitted) {
-                        if (isActualCorrect) labelClass += " text-green-700 font-bold";
-                        else if (isSelected && !isActualCorrect) labelClass += " text-red-600 line-through";
+                        if (isActualCorrect) containerClass += " border-green-500 bg-green-50/50 dark:bg-green-900/20";
+                        else if (isSelected && !isActualCorrect) containerClass += " border-red-500 bg-red-50/50 dark:bg-red-900/20 opacity-80";
+                        else containerClass += " border-slate-200 dark:border-slate-800 bg-background opacity-50";
+                      } else {
+                        if (isSelected) containerClass += " border-primary bg-primary/5 shadow-sm";
+                        else containerClass += " border-slate-200 dark:border-slate-800 bg-background hover:border-primary/40 hover:bg-slate-50 dark:hover:bg-slate-900";
+                      }
+
+                      let textClass = "flex-1 text-base leading-relaxed transition-colors ";
+                      if (isSubmitted) {
+                        if (isActualCorrect) textClass += " text-green-800 dark:text-green-300 font-bold";
+                        else if (isSelected && !isActualCorrect) textClass += " text-red-700 dark:text-red-300 line-through";
+                        else textClass += " text-muted-foreground font-medium";
+                      } else {
+                        if (isSelected) textClass += " text-primary font-bold";
+                        else textClass += " text-foreground font-medium";
                       }
 
                       return (
-                        <div key={optIndex} className="flex items-center space-x-2 space-x-reverse bg-background p-3 rounded-lg border">
+                        <Label 
+                          key={optIndex} 
+                          htmlFor={`${q.id}-${optIndex}`}
+                          className={containerClass}
+                        >
                           <RadioGroupItem 
                             value={optIndex.toString()} 
                             id={`${q.id}-${optIndex}`} 
                             disabled={isSubmitted}
+                            className={`w-5 h-5 mt-0.5 transition-all ${isSelected && !isSubmitted ? 'border-primary text-primary' : ''}`}
                           />
-                          <Label htmlFor={`${q.id}-${optIndex}`} className={labelClass}>
+                          <span className={textClass}>
                             {opt}
-                          </Label>
-                        </div>
+                          </span>
+                        </Label>
                       );
                     })}
                   </RadioGroup>

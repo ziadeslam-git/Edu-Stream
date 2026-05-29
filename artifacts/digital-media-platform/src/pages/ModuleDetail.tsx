@@ -19,23 +19,23 @@ export default function ModuleDetail() {
   const renderSectionContent = (section: any) => {
     switch (section.type) {
       case "text":
-        return <p className="text-muted-foreground whitespace-pre-wrap leading-relaxed">{section.content}</p>;
+        return <p className="text-foreground/90 text-base md:text-lg whitespace-pre-wrap leading-loose">{section.content}</p>;
       
       case "list":
         return (
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {section.content.map((item: any, i: number) => (
               <li key={i} className="flex items-start gap-3">
-                <div className="mt-1 min-w-[24px]">
-                  <CheckCircle2 className="h-5 w-5 text-primary" style={{ color: module.color }} />
+                <div className="mt-1.5 min-w-[24px]">
+                  <CheckCircle2 className="h-6 w-6 text-primary" style={{ color: module.color }} />
                 </div>
                 <div>
                   {typeof item === "string" ? (
-                    <span className="text-muted-foreground">{item}</span>
+                    <span className="text-foreground/90 text-base md:text-lg leading-relaxed">{item}</span>
                   ) : (
                     <>
-                      <span className="font-semibold text-foreground">{item.title}: </span>
-                      <span className="text-muted-foreground">{item.desc}</span>
+                      <span className="font-bold text-foreground text-base md:text-lg">{item.title}: </span>
+                      <span className="text-foreground/80 text-base md:text-lg leading-relaxed">{item.desc}</span>
                     </>
                   )}
                 </div>
@@ -50,17 +50,17 @@ export default function ModuleDetail() {
             {section.content.map((step: string, i: number) => (
               <AccordionItem key={i} value={`step-${i}`}>
                 <AccordionTrigger className="text-right hover:no-underline">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-4">
                     <div 
-                      className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold text-white"
+                      className="flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold text-white shadow-sm"
                       style={{ backgroundColor: module.color }}
                     >
                       {i + 1}
                     </div>
-                    <span>الخطوة {i + 1}</span>
+                    <span className="text-foreground font-semibold text-base md:text-lg">الخطوة {i + 1}</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pr-9">
+                <AccordionContent className="text-foreground/80 text-base md:text-lg pr-12 leading-relaxed">
                   {step}
                 </AccordionContent>
               </AccordionItem>
@@ -70,13 +70,13 @@ export default function ModuleDetail() {
 
       case "comparison":
         return (
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto rounded-lg border border-border">
             <table className="w-full border-collapse">
               <tbody>
                 {section.content.map((item: any, i: number) => (
-                  <tr key={i} className="border-b last:border-0">
-                    <td className="py-3 pr-4 font-semibold text-foreground w-1/3 bg-muted/50 rounded-r-lg">{item.title}</td>
-                    <td className="py-3 px-4 text-muted-foreground w-2/3">{item.desc}</td>
+                  <tr key={i} className="border-b border-border/50 last:border-0 hover:bg-muted/20 transition-colors">
+                    <td className="py-4 pr-6 font-bold text-foreground w-1/3 bg-muted/30 text-base md:text-lg">{item.title}</td>
+                    <td className="py-4 px-6 text-foreground/90 w-2/3 text-base md:text-lg leading-relaxed">{item.desc}</td>
                   </tr>
                 ))}
               </tbody>
@@ -90,13 +90,14 @@ export default function ModuleDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-muted/10 pb-24">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-24">
       {/* Hero Header */}
       <div 
-        className="text-white py-16 relative overflow-hidden"
+        className="text-white pt-16 pb-24 relative overflow-hidden"
         style={{ backgroundColor: module.color }}
       >
         <div className="absolute inset-0 bg-black/10 mix-blend-multiply" />
+        
         <div className="container mx-auto px-4 relative z-10">
           <Breadcrumb className="mb-6 opacity-80 hover:opacity-100 transition-opacity">
             <BreadcrumbList>
@@ -123,6 +124,34 @@ export default function ModuleDetail() {
             <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">{module.title}</h1>
           </motion.div>
         </div>
+
+        {/* Realistic Torn Paper Edge Divider */}
+        <div className="absolute bottom-[0px] left-0 w-full h-[60px] z-20 pointer-events-none translate-y-[2px]">
+          <svg width="0" height="0" className="absolute">
+            <defs>
+              <filter id="torn-paper-edge" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015 0.08" numOctaves="4" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="35" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              <filter id="torn-paper-edge-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015 0.08" numOctaves="4" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="45" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+          </svg>
+          
+          {/* Back layer for 3D depth/shadow effect of the tear */}
+          <div 
+            className="absolute top-[20px] left-[-2%] w-[104%] h-[60px] bg-black/20 dark:bg-white/10"
+            style={{ filter: "url(#torn-paper-edge-shadow)" }}
+          />
+          
+          {/* Main paper color layer */}
+          <div 
+            className="absolute top-[25px] left-[-2%] w-[104%] h-[60px] bg-slate-50 dark:bg-slate-950"
+            style={{ filter: "url(#torn-paper-edge)" }}
+          />
+        </div>
       </div>
 
       <div className="container mx-auto px-4 mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -135,17 +164,17 @@ export default function ModuleDetail() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl flex items-center gap-2">
-                    {section.type === 'list' ? <List className="h-5 w-5 text-primary" style={{ color: module.color }} /> :
-                     section.type === 'steps' ? <List className="h-5 w-5 text-primary" style={{ color: module.color }} /> :
-                     section.type === 'comparison' ? <Columns className="h-5 w-5 text-primary" style={{ color: module.color }} /> :
-                     <Target className="h-5 w-5 text-primary" style={{ color: module.color }} />}
+              <Card className="shadow-sm border-border/60 hover:shadow-md transition-shadow">
+                <CardHeader className="bg-muted/10 border-b border-border/40 pb-4">
+                  <CardTitle className="text-2xl flex items-center gap-3">
+                    {section.type === 'list' ? <List className="h-6 w-6 text-primary" style={{ color: module.color }} /> :
+                     section.type === 'steps' ? <List className="h-6 w-6 text-primary" style={{ color: module.color }} /> :
+                     section.type === 'comparison' ? <Columns className="h-6 w-6 text-primary" style={{ color: module.color }} /> :
+                     <Target className="h-6 w-6 text-primary" style={{ color: module.color }} />}
                     {section.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-6">
                   {renderSectionContent(section)}
                 </CardContent>
               </Card>
@@ -158,10 +187,10 @@ export default function ModuleDetail() {
             transition={{ delay: module.sections.length * 0.1 }}
             className="mt-12 text-center"
           >
-            <h3 className="text-xl font-semibold mb-4">هل أنت مستعد لاختبار ما تعلمته؟</h3>
-            <Button asChild size="lg" className="rounded-full px-12 h-14 text-lg text-white hover:opacity-90" style={{ backgroundColor: module.color }}>
+            <h3 className="text-2xl font-bold mb-6 text-foreground">هل أنت مستعد لاختبار ما تعلمته؟</h3>
+            <Button asChild size="lg" className="rounded-full px-12 h-14 text-lg font-bold text-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all" style={{ backgroundColor: module.color }}>
               <Link href={`/modules/${module.id}/quiz`}>
-                ابدأ الاختبار
+                ابدأ الاختبار الآن
               </Link>
             </Button>
           </motion.div>
@@ -170,19 +199,36 @@ export default function ModuleDetail() {
         {/* Sidebar */}
         <div className="lg:col-span-4">
           <div className="sticky top-24 space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg flex items-center gap-2">
+            
+            {module.generalObjective && (
+              <Card className="border-border/60 shadow-sm">
+                <CardHeader className="bg-muted/10 border-b border-border/40 pb-4">
+                  <CardTitle className="text-xl flex items-center gap-2 text-foreground">
+                    <Target className="h-5 w-5" style={{ color: module.color }} />
+                    الهدف العام
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <p className="text-foreground/90 text-base md:text-lg leading-relaxed font-medium">
+                    {module.generalObjective}
+                  </p>
+                </CardContent>
+              </Card>
+            )}
+
+            <Card className="border-border/60 shadow-sm">
+              <CardHeader className="bg-muted/10 border-b border-border/40 pb-4">
+                <CardTitle className="text-xl flex items-center gap-2 text-foreground">
                   <Target className="h-5 w-5" style={{ color: module.color }} />
-                  الأهداف التعليمية
+                  الأهداف الخاصة الإجرائية
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
+              <CardContent className="pt-6">
+                <ul className="space-y-4">
                   {module.objectives.map((obj, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" style={{ color: module.color }} />
-                      <span>{obj}</span>
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 mt-1 shrink-0" style={{ color: module.color }} />
+                      <span className="text-foreground/90 text-base md:text-lg leading-relaxed">{obj}</span>
                     </li>
                   ))}
                 </ul>

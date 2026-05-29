@@ -86,22 +86,24 @@ export default function Assessment() {
               {currentDimension.title}
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-6 space-y-8">
+          <CardContent className="pt-6 space-y-6 bg-slate-50/50 dark:bg-slate-950/50">
             {currentDimension.items.map((item, idx) => (
-              <div key={item.id} className="space-y-4">
-                <h3 className="font-medium text-lg leading-snug">
+              <div key={item.id} className="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm space-y-5 hover:border-primary/20 dark:hover:border-primary/40 transition-colors">
+                <h3 className="font-semibold text-lg leading-snug text-slate-800 dark:text-slate-100">
                   {idx + 1}. {item.text}
                 </h3>
                 <RadioGroup 
                   onValueChange={(val) => setAnswers(prev => ({ ...prev, [item.id]: Number(val) }))}
                   value={answers[item.id]?.toString()}
-                  className="flex flex-col sm:flex-row sm:flex-wrap gap-4"
+                  className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-6"
                   dir="rtl"
                 >
                   {likertLabels.map((label) => (
-                    <div key={label.value} className="flex items-center space-x-2 space-x-reverse">
-                      <RadioGroupItem value={label.value.toString()} id={`${item.id}-${label.value}`} />
-                      <Label htmlFor={`${item.id}-${label.value}`} className="cursor-pointer">{label.label}</Label>
+                    <div key={label.value} className="flex items-center gap-3">
+                      <RadioGroupItem value={label.value.toString()} id={`${item.id}-${label.value}`} className="w-5 h-5" />
+                      <Label htmlFor={`${item.id}-${label.value}`} className="cursor-pointer text-base font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
+                        {label.label}
+                      </Label>
                     </div>
                   ))}
                 </RadioGroup>

@@ -3,6 +3,9 @@ import { ModuleCard } from "@/components/ModuleCard";
 import { motion } from "framer-motion";
 import { useProgress } from "@/hooks/useProgress";
 import { useUser } from "@clerk/react";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import { ShaderBackground } from "@/components/ShaderBackground";
 
 export default function Modules() {
   const { getModuleProgress } = useProgress();
@@ -18,8 +21,12 @@ export default function Modules() {
 
   return (
     <div className="min-h-screen bg-muted/10 pb-24">
-      <div className="bg-primary text-primary-foreground py-16">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
+      <div className="relative text-white py-16 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <ShaderBackground />
+          <div className="absolute inset-0 bg-primary/40 backdrop-blur-[4px] dark:bg-background/70" />
+        </div>
+        <div className="container relative z-10 mx-auto px-4 text-center max-w-3xl">
           <motion.h1 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -31,10 +38,19 @@ export default function Modules() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-primary-foreground/80 text-lg"
+            className="text-primary-foreground/80 text-lg mb-8"
           >
             مسار تعليمي متكامل لتعلم مهارات الإعلام الرقمي وتوظيف التلعيب في العملية التعليمية
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <Button variant="secondary" asChild className="rounded-full font-semibold px-8">
+              <Link href="/assessment">إعادة التقييم القبلي</Link>
+            </Button>
+          </motion.div>
         </div>
       </div>
 

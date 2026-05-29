@@ -131,17 +131,7 @@ function ClerkQueryClientCacheInvalidator() {
   return null;
 }
 
-// After sign-in: if assessment not done → /assessment, else → /modules
-function HomeRoute() {
-  const { user, isLoaded } = useUser();
-  if (!isLoaded) return null;
-  if (user) {
-    const done = localStorage.getItem(`assessment_done_${user.id}`);
-    if (done) return <Redirect to="/modules" />;
-    return <Redirect to="/assessment" />;
-  }
-  return <Home />;
-}
+
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, isLoaded } = useUser();
@@ -156,7 +146,7 @@ function Router() {
       <Navbar />
       <main className="flex-1">
         <Switch>
-          <Route path="/" component={HomeRoute} />
+          <Route path="/" component={Home} />
           <Route path="/sign-in/*?" component={SignInPage} />
           <Route path="/sign-up/*?" component={SignUpPage} />
           <Route path="/assessment">
