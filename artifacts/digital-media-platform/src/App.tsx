@@ -7,7 +7,6 @@ import { QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/reac
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
 import Modules from "@/pages/Modules";
 import ModuleDetail from "@/pages/ModuleDetail";
@@ -169,7 +168,6 @@ function Router() {
           <Route component={NotFound} />
         </Switch>
       </main>
-      <Footer />
     </div>
   );
 }
