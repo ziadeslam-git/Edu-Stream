@@ -1,8 +1,21 @@
 import { modules } from "@/data/modules";
 import { ModuleCard } from "@/components/ModuleCard";
 import { motion } from "framer-motion";
+import { useProgress } from "@/hooks/useProgress";
+import { useUser } from "@clerk/react";
 
 export default function Modules() {
+  const { getModuleProgress } = useProgress();
+  const { isLoaded } = useUser();
+
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="h-10 w-10 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-muted/10 pb-24">
       <div className="bg-primary text-primary-foreground py-16">
@@ -28,7 +41,12 @@ export default function Modules() {
       <div className="container mx-auto px-4 mt-[-2rem] relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {modules.map((module, index) => (
-            <ModuleCard key={module.id} module={module} index={index} />
+            <ModuleCard 
+              key={module.id} 
+              module={module} 
+              index={index} 
+              progress={getModuleProgress(module.id)} 
+            />
           ))}
         </div>
       </div>

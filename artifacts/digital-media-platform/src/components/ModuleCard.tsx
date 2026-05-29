@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, BookOpen, Target } from "lucide-react";
@@ -10,12 +10,10 @@ import { ProgressBadge } from "@/components/ProgressBadge";
 interface ModuleCardProps {
   module: Module;
   index: number;
+  progress?: number;
 }
 
-export function ModuleCard({ module, index }: ModuleCardProps) {
-  // Mock progress based on index for demonstration
-  const mockProgress = Math.min(100, Math.max(0, 100 - index * 20));
-
+export function ModuleCard({ module, index, progress = 0 }: ModuleCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -55,7 +53,7 @@ export function ModuleCard({ module, index }: ModuleCardProps) {
               <span>{module.sections.length} أقسام رئيسية</span>
             </div>
           </div>
-          <ProgressBadge value={mockProgress} label="نسبة الإنجاز" />
+          <ProgressBadge value={progress} label="نسبة الإنجاز" />
         </CardContent>
         <CardFooter>
           <Button asChild className="w-full group/btn text-white hover:opacity-90" style={{ backgroundColor: module.color }}>

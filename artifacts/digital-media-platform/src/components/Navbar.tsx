@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { BookOpen, GraduationCap, Info, Moon, Sun } from "lucide-react";
+import { GraduationCap, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useClerk, useUser } from "@clerk/react";
 
 export function Navbar() {
   const [location] = useLocation();
@@ -11,6 +12,10 @@ export function Navbar() {
     }
     return false;
   });
+
+  const { signOut } = useClerk();
+  const { user } = useUser();
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   useEffect(() => {
     const root = document.documentElement;
@@ -60,9 +65,34 @@ export function Navbar() {
           >
             {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
-          <Button asChild className="hidden sm:inline-flex" data-testid="button-nav-start">
-            <Link href="/modules">ابدأ التعلم</Link>
-          </Button>
+          
+          {!user && (
+            <Button variant="outline" size="sm" asChild data-testid="button-nav-signin">
+              <Link href="/sign-in">تسجيل الدخول</Link>
+            </Button>
+          )}
+
+          {user && (
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-medium">
+                {user.firstName || user.primaryEmailAddress?.emailAddress.split('@')[0]}
+              </span>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={() => signOut({ redirectUrl: basePath || "/" })}
+                data-testid="button-nav-signout"
+              >
+                خروج
+              </Button>
+            </div>
+          )}
+          
+          {!user && (
+            <Button asChild className="hidden sm:inline-flex" data-testid="button-nav-start">
+              <Link href="/sign-in">ابدأ التعلم</Link>
+            </Button>
+          )}
         </div>
       </div>
     </nav>

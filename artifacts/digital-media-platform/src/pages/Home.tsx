@@ -29,7 +29,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" asChild className="w-full sm:w-auto text-lg px-8 h-14 rounded-full" data-testid="hero-start-learning">
-                <Link href="/modules">ابدأ رحلة التعلم</Link>
+                <Link href="/sign-in">ابدأ رحلة التعلم</Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="w-full sm:w-auto text-lg px-8 h-14 rounded-full" data-testid="hero-about">
                 <Link href="/about">عن المنصة</Link>

@@ -151,54 +151,70 @@ export default function ModuleDetail() {
               </Card>
             </motion.div>
           ))}
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: module.sections.length * 0.1 }}
+            className="mt-12 text-center"
+          >
+            <h3 className="text-xl font-semibold mb-4">هل أنت مستعد لاختبار ما تعلمته؟</h3>
+            <Button asChild size="lg" className="rounded-full px-12 h-14 text-lg text-white hover:opacity-90" style={{ backgroundColor: module.color }}>
+              <Link href={`/modules/${module.id}/quiz`}>
+                ابدأ الاختبار
+              </Link>
+            </Button>
+          </motion.div>
         </div>
 
         {/* Sidebar */}
-        <div className="lg:col-span-4 space-y-6">
-          <Card className="sticky top-24">
-            <CardHeader>
-              <CardTitle className="text-lg flex items-center gap-2">
-                <Target className="h-5 w-5" style={{ color: module.color }} />
-                الأهداف التعليمية
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                {module.objectives.map((obj, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" style={{ color: module.color }} />
-                    <span>{obj}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-
-          {module.videos && module.videos.length > 0 && (
+        <div className="lg:col-span-4">
+          <div className="sticky top-24 space-y-6">
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg flex items-center gap-2">
-                  <Play className="h-5 w-5" style={{ color: module.color }} />
-                  فيديوهات تعليمية
+                  <Target className="h-5 w-5" style={{ color: module.color }} />
+                  الأهداف التعليمية
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
-                {module.videos.map((video, i) => (
-                  <Button 
-                    key={i} 
-                    variant="outline" 
-                    className="w-full justify-start h-auto py-3 px-4 whitespace-normal text-right group"
-                    asChild
-                  >
-                    <a href={video.url} target="_blank" rel="noopener noreferrer">
-                      <Play className="h-4 w-4 ml-2 shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
-                      <span>{video.title}</span>
-                    </a>
-                  </Button>
-                ))}
+              <CardContent>
+                <ul className="space-y-3">
+                  {module.objectives.map((obj, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" style={{ color: module.color }} />
+                      <span>{obj}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
-          )}
+
+            {module.videos && module.videos.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center gap-2">
+                    <Play className="h-5 w-5" style={{ color: module.color }} />
+                    فيديوهات تعليمية
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  {module.videos.map((video, i) => (
+                    <Button 
+                      key={i} 
+                      variant="outline" 
+                      className="w-full justify-start h-auto py-3 px-4 whitespace-normal text-right group"
+                      asChild
+                    >
+                      <a href={video.url} target="_blank" rel="noopener noreferrer">
+                        <Play className="h-4 w-4 ml-2 shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
+                        <span>{video.title}</span>
+                      </a>
+                    </Button>
+                  ))}
+                </CardContent>
+              </Card>
+            )}
+          </div>
         </div>
       </div>
     </div>
