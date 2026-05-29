@@ -20,7 +20,7 @@ export default function Modules() {
   }
 
   return (
-    <div className="min-h-screen bg-muted/10 pb-24">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-24">
       <div className="relative text-white py-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <ShaderBackground />
@@ -51,6 +51,33 @@ export default function Modules() {
               <Link href="/assessment">إعادة التقييم القبلي</Link>
             </Button>
           </motion.div>
+        </div>
+        {/* Realistic Torn Paper Edge Divider */}
+        <div className="absolute bottom-[0px] left-0 w-full h-[60px] z-20 pointer-events-none translate-y-[2px]">
+          <svg width="0" height="0" className="absolute">
+            <defs>
+              <filter id="modules-torn-paper-edge" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015 0.08" numOctaves="4" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="35" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              <filter id="modules-torn-paper-edge-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015 0.08" numOctaves="4" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="45" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+          </svg>
+          
+          {/* Back layer for 3D depth/shadow effect of the tear */}
+          <div 
+            className="absolute bottom-[0px] left-[-2%] w-[104%] h-[40px] bg-black/20 dark:bg-white/10"
+            style={{ filter: "url(#modules-torn-paper-edge-shadow)" }}
+          />
+          
+          {/* Main paper color layer (matches section below) */}
+          <div 
+            className="absolute bottom-[0px] left-[-2%] w-[104%] h-[35px] bg-slate-50 dark:bg-slate-950"
+            style={{ filter: "url(#modules-torn-paper-edge)" }}
+          />
         </div>
       </div>
 

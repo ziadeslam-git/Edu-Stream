@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-muted/10 pb-24">
-      <div className="bg-primary text-primary-foreground py-16">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 pb-24">
+      <div className="bg-primary text-primary-foreground py-16 relative">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <motion.h1 
             initial={{ opacity: 0, y: 10 }}
@@ -22,6 +22,34 @@ export default function About() {
           >
             تعرف على رؤية ورسالة منصة مهارات الإعلام الرقمي
           </motion.p>
+        </div>
+        
+        {/* Realistic Torn Paper Edge Divider */}
+        <div className="absolute bottom-[0px] left-0 w-full h-[60px] z-20 pointer-events-none translate-y-[2px]">
+          <svg width="0" height="0" className="absolute">
+            <defs>
+              <filter id="about-torn-paper-edge" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015 0.08" numOctaves="4" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="35" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              <filter id="about-torn-paper-edge-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015 0.08" numOctaves="4" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="45" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+          </svg>
+          
+          {/* Back layer for 3D depth/shadow effect of the tear */}
+          <div 
+            className="absolute bottom-[0px] left-[-2%] w-[104%] h-[40px] bg-black/20 dark:bg-white/10"
+            style={{ filter: "url(#about-torn-paper-edge-shadow)" }}
+          />
+          
+          {/* Main paper color layer (matches section below) */}
+          <div 
+            className="absolute bottom-[0px] left-[-2%] w-[104%] h-[35px] bg-slate-50 dark:bg-slate-950"
+            style={{ filter: "url(#about-torn-paper-edge)" }}
+          />
         </div>
       </div>
 
